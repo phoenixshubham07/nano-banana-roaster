@@ -1,0 +1,5 @@
+The application is designed to accept only PDF files. The file input field in the webpage has an `accept=".pdf"` attribute, which means it will only allow you to select PDF files.
+
+Additionally, the server-side code uses a library called `pdf-parse` which is specifically designed to extract text from PDF documents. If you upload an HTML file, `pdf-parse` will not be able to process it, and the application will likely return an error.
+
+Therefore, you would need to convert your LinkedIn page (or any webpage) to a PDF document first, and then upload that PDF to the application. Most browsers have a "Print to PDF" option that you can use for this purpose.

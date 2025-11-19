@@ -1,0 +1,11 @@
+# Ignore all audio files in the sounds directory
+sounds/
+# OR: Ignore all .mp3 files globally if the sounds are scattered
+*.mp3
+
+# Also typically good to exclude:
+node_modules/
+dist/
+build/
+*.zip
+*.rar

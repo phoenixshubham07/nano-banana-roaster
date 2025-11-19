@@ -1,0 +1,150 @@
+body {
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    --s: 80px;
+  
+    --_g: radial-gradient(#F4EAD5 31%,#0000 32%);
+    --_l: radial-gradient(#594F4F 15%,#0000 16%);
+    background: var(--_l),var(--_l),var(--_g),var(--_g),#45ADA8;
+    background-position: 0 0,var(--s) var(--s);
+    background-size: calc(2*var(--s)) calc(2*var(--s));
+    animation: 
+      x 2s cubic-bezier(0.5,92,0.5,-92) infinite, 
+      y 2s cubic-bezier(0.5,92,0.5,-92) infinite -.5s;
+}
+
+@keyframes x {
+    to {
+      background-position-x: -.25px, calc(var(--s) - 1px),-.5px,calc(var(--s) - .5px);
+    }
+}
+@keyframes y {
+    to {
+      background-position-y: -.25px, calc(var(--s) - 1px),.25px,calc(var(--s) - .5px);
+    }
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    padding: 2rem;
+}
+
+.container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 700px;
+    width: 100%;
+}
+
+.roast-container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 700px;
+    width: 100%;
+    min-height: 300px;
+}
+
+.input-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+input[type="text"],
+input[type="file"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #ffc107;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e0a800;
+}
+
+#download-button {
+    display: block; /* Make it a block element */
+    margin: 1rem auto; /* Center it with auto margins and add some top margin */
+}
+
+#roast-result {
+    margin-top: 1.5rem;
+    text-align: left;
+    white-space: pre-wrap;
+}
+
+#click-to-start {
+    color: white;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.loader {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #ffc107; /* Yellow */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+    margin: 2rem auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

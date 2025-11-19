@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nano Banana Resume Roaster</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="background-audio" src="default.mp3" autoplay loop></audio>
+    <audio id="meme-audio" src="sg.mp3"></audio>
+    <h1>Nano Banana Resume Roaster</h1>
+    <p id="click-to-start">Click anywhere to start the music</p>
+    <div class="main-content">
+        <div class="container">
+            <p>Upload your resume or startup idea (PDF) to get roasted by the one and only Nano Banana!</p>
+            <div class="input-group">
+                <label for="resume-upload">Upload your Resume or Startup Idea (PDF)</label>
+                <input type="file" id="resume-upload" accept=".pdf,.html">
+            </div>
+            <button id="roast-button">Roast Me!</button>
+        </div>
+        <div class="roast-container">
+            <h2>Your Roast Will Appear Here</h2>
+            <div id="roast-result"></div>
+            <div id="loader" class="loader" style="display: none;"></div>
+            <button id="download-button" style="display: none;">Download Meme</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
